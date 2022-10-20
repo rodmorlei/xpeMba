@@ -4,21 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".GiftShow">
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="340dp"
-        android:layout_height="443dp"
-        android:layout_marginStart="41dp"
-        android:layout_marginTop="227dp"
+        android:layout_width="334dp"
+        android:layout_height="177dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="312dp"
+        android:adjustViewBounds="true"
         android:background="#FFEB3B"
-        android:backgroundTint="#9E6A6A"
         android:contentDescription="Imagem de aniversário"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        tools:srcCompat="@drawable/feliz"
         tools:visibility="visible" />
 
     <TextView
@@ -27,7 +28,10 @@
         android:layout_height="97dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="106dp"
-        android:text="Surpresa!!!!"
+        android:text="Surpresa!!!"
+        android:textColor="#9C27B0"
+        android:textSize="60sp"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
