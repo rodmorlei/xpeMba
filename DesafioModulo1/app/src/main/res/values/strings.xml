@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DesafioModulo1</string>
+    <string name="lista_vazia">A lista de compras está vazia!</string>
+    <string name="dica_botao_add">Botão para adicionar ítens na lista</string>
 </resources>
