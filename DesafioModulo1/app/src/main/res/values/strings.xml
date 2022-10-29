@@ -2,4 +2,8 @@
     <string name="app_name">DesafioModulo1</string>
     <string name="lista_vazia">A lista de compras está vazia!</string>
     <string name="dica_botao_add">Botão para adicionar ítens na lista</string>
+    <string name="descricao_item">Descrição ìtem</string>
+    <string name="quantidade">Quantidade</string>
+    <string name="incluir">Incluir</string>
+    <string name="cancelar">Cancelar</string>
 </resources>
