@@ -6,4 +6,6 @@
     <string name="quantidade">Quantidade</string>
     <string name="incluir">Incluir</string>
     <string name="cancelar">Cancelar</string>
+    <string name="err_sem_descricao">Favor informar a descrição</string>
+    <string name="err_sem_quantidade">Favor preencher a quantidade</string>
 </resources>
