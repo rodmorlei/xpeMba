@@ -1,10 +1,13 @@
 package com.example.desafiomodulo1.ui.incluiritem
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.desafiomodulo1.R
+import com.example.desafiomodulo1.data.Item
 import com.example.desafiomodulo1.databinding.ActivityIncluirItemBinding
+import com.example.desafiomodulo1.ui.main.MainActivity
 
 class IncluirItemActivity : AppCompatActivity() {
     private lateinit var binding: ActivityIncluirItemBinding
@@ -43,9 +46,21 @@ class IncluirItemActivity : AppCompatActivity() {
             binding.quantidadeItemTIL.error = null
         }
 
-        if (descricao.trim().isNotEmpty() && quantidade.trim().isNotEmpty()){
+        if (descricao.trim().isNotEmpty() && quantidade.isNotEmpty()){
+
+            Intent().apply {
+                putExtra(MainActivity.RETORNO, Item(
+                    descricao = descricao,
+                    quantidade = quantidade,
+                    coletado = false
+                ))
+                setResult(RESULT_OK, this)
+            }
+
             Toast.makeText(applicationContext, "Item $descricao incluído com sucesso", Toast.LENGTH_LONG).show()
+
             finish()
+
         }
 
     }
