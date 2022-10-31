@@ -22,6 +22,12 @@ class ItemAdapter(private val listaItem: List<Item>): RecyclerView.Adapter<ItemA
                 tvDescricao.text = item.descricao
                 tvQuantidade.text = item.quantidade
                 cbSelect.isChecked = item.coletado
+
+                cbSelect.setOnClickListener{ v ->
+                    val isChecked = (v as CheckBox).isChecked
+                    listaItem[adapterPosition].coletado = isChecked
+                }
+
             }
         }
 

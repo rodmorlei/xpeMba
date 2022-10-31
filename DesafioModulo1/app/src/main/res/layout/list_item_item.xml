@@ -18,7 +18,7 @@
             android:id="@+id/cbSelect"
             android:layout_width="48dp"
             android:layout_height="match_parent"
-            android:button="@drawable/ic_baseline_check_24"
+            android:button="@drawable/ic_baseline_check_box_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
