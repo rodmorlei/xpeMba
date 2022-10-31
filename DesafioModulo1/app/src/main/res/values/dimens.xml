@@ -6,4 +6,5 @@
     <dimen name="elevation_cardview">8dp</dimen>
     <dimen name="corner_cadrview">4dp</dimen>
     <dimen name="padding_padrao">8dp</dimen>
+    <dimen name="margin_checkbox">50dp</dimen>
 </resources>

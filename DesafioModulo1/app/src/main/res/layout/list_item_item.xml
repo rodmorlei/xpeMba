@@ -14,8 +14,19 @@
         android:padding="@dimen/padding_padrao"
         android:layout_height="wrap_content">
 
+        <CheckBox
+            android:id="@+id/cbSelect"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:button="@drawable/ic_baseline_check_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/tvDescricao"
+            android:layout_marginStart="@dimen/margin_checkbox"
             android:layout_width="0dp"
             android:textStyle="bold"
             android:layout_height="wrap_content"
@@ -26,6 +37,7 @@
 
         <TextView
             android:id="@+id/tvQuantidade"
+            android:layout_marginStart="@dimen/margin_checkbox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"

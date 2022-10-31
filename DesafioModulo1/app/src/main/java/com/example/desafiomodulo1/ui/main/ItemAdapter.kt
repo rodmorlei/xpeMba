@@ -1,11 +1,15 @@
 package com.example.desafiomodulo1.ui.main
 
+import android.R
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
+import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafiomodulo1.data.Item
 import com.example.desafiomodulo1.databinding.ListItemItemBinding
+
 
 class ItemAdapter(private val listaItem: List<Item>): RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
@@ -17,6 +21,7 @@ class ItemAdapter(private val listaItem: List<Item>): RecyclerView.Adapter<ItemA
             binding.apply {
                 tvDescricao.text = item.descricao
                 tvQuantidade.text = item.quantidade
+                cbSelect.isChecked = item.coletado
             }
         }
 
