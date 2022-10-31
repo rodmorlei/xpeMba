@@ -7,6 +7,7 @@
     tools:context=".ui.main.MainActivity">
 
     <TextView
+        android:id="@+id/tvMensagemListaVazia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lista_vazia"
@@ -25,6 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:id="@+id/rvListaItem"
         tools:listitem="@layout/list_item_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -8,4 +8,5 @@
     <string name="cancelar">Cancelar</string>
     <string name="err_sem_descricao">Favor informar a descrição</string>
     <string name="err_sem_quantidade">Favor preencher a quantidade</string>
+    <string name="lista_limpa_sucesso">Sucesso ao limpar a lista</string>
 </resources>

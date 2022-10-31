@@ -4,8 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Toast
+import android.widget.Toast.LENGTH_LONG
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import com.example.desafiomodulo1.R
 import com.example.desafiomodulo1.data.Item
 import com.example.desafiomodulo1.databinding.ActivityMainBinding
 import com.example.desafiomodulo1.ui.incluiritem.IncluirItemActivity
@@ -38,12 +42,24 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configurarObservers() {
-        configurarAtualizacaoLista()
+        configurarRecyclerView()
     }
 
-    private fun configurarAtualizacaoLista() {
+    private fun configurarRecyclerView() {
         viewModel.listaItem.observe(this) { lista->
                 Log.i("TesteLista", "Lista funcionando")
+            atualizarLista(lista)
+        }
+    }
+
+    private fun atualizarLista(lista: List<Item>) {
+        if(lista.isNullOrEmpty()) {
+            binding.rvListaItem.visibility = View.GONE
+            binding.tvMensagemListaVazia.visibility = View.VISIBLE
+        } else {
+            binding.rvListaItem.visibility = View.VISIBLE
+            binding.tvMensagemListaVazia.visibility = View.GONE
+            binding.rvListaItem.adapter = ItemAdapter(listaItem = lista)
         }
     }
 
@@ -60,6 +76,13 @@ class MainActivity : AppCompatActivity() {
             Intent(this, IncluirItemActivity::class.java).let {
                 retornoItem.launch(it)
             }
+        }
+        binding.fabAddNovoItem.setOnLongClickListener{
+            viewModel.limparListaItem()
+            Toast.makeText(this, R.string.lista_limpa_sucesso,
+            LENGTH_LONG
+            ).show()
+            it.isLongClickable
         }
     }
 
