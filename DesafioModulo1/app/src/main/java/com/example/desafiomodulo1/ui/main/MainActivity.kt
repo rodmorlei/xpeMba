@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
             binding.rvListaItem.visibility = View.VISIBLE
             binding.tvMensagemListaVazia.visibility = View.GONE
             binding.rvListaItem.adapter = ItemAdapter(listaItem = lista)
+            binding.tvQtdItens.text = lista.size.toString()
         }
     }
 
