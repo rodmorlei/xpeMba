@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
         if(lista.isNullOrEmpty()) {
             binding.rvListaItem.visibility = View.GONE
             binding.tvMensagemListaVazia.visibility = View.VISIBLE
+            binding.tvQtdItens.text = "0"
         } else {
             binding.rvListaItem.visibility = View.VISIBLE
             binding.tvMensagemListaVazia.visibility = View.GONE
