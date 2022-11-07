@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TrabalhoPraticoModulo2</string>
+    <string name="descricao_item">Nome</string>
 </resources>
